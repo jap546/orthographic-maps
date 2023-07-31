@@ -183,10 +183,17 @@ sea_ice_plot = function(rast_df, var, colour_pal, breaks, title) {
 
 
 sea_ice_plot(
-  ice_thick_data$r_df,
+  ice_cov_data$r_df,
   ta,
   "Blues",
   c(0, 20, 40, 60, 80, 100),
   glue::glue("Sea ice cover (%) - September {year}")
   )
 
+sea_ice_plot(
+  ice_thick_data$r_df,
+  ta,
+  "Blues",
+  c(0, 1, 2, 3, 4, 5),
+  glue::glue("Sea ice thickness (m) - September {year}")
+)
